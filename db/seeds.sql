@@ -19,7 +19,7 @@ VALUES ("Marissa", "Gaustin", 1, 5),
        ("Axel", "Molson", 2, 5),
        ("Grace", "Dominguez", 3, 5),
        ("Richard", "Wilson", 4, 3),
-       ("James", "Gallardo", 5),
+       ("James", "Gallardo", 5, NULL),
        ("Ray", "Espinoza", 6, 5),
        ("Precious", "Smith", 7, 1),
        ("Darling", "Santiago", 8, 1);

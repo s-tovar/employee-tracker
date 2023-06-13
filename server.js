@@ -61,6 +61,7 @@ const mainMenu = () => {
                 updateEmployeeRole();
                 break;
             default:
+                db.end();
         }
     });
 };
