@@ -67,11 +67,31 @@ const mainMenu = () => {
 
 //create function to view departments from db
 const viewAllDepartments = () => {
-    const sql = 'SELECT * FROM department';
+    const sql = `SELECT * FROM department`;
     db.query(sql, (err, res) => {
         if (err) throw err;
         //check if displays result 
         console.table(res); 
         mainMenu();
+    });
+};
+
+// view roles in db
+const viewAllRoles = () => {
+    const sql = `SELECT role.id, title, salary, name AS department FROM role LEFT JOIN department ON department.id = role.department_id`;
+    db.query(sql, (err, res) => {
+        if (err) throw err;
+        console.table(res);
+        mainMenu;
+    });
+};
+
+// function to view employees in db
+const viewAllEmployees = () => {
+    const sql = `SELECT e.id,e.first_name, e.last_name, title, name AS department, salary, CONCAT(m.first_name, ' ', m.last_name) AS manager FROM employee e LEFT JOIN role ON e.role_id = role.id LEFT JOIN department ON role.department_id = department.id LEFT JOIN employee m ON e.manager_id = m.id`;
+    db.query(sql, (err, res) => {
+        if (err) throw err;
+        console.table(res);
+        mainMenu;
     });
 };
