@@ -64,3 +64,14 @@ const mainMenu = () => {
         }
     });
 };
+
+//create function to view departments from db
+const viewAllDepartments = () => {
+    const sql = 'SELECT * FROM department';
+    db.query(sql, (err, res) => {
+        if (err) throw err;
+        //check if displays result 
+        console.table(res); 
+        mainMenu();
+    });
+};
