@@ -95,3 +95,80 @@ const viewAllEmployees = () => {
         mainMenu;
     });
 };
+
+// add department to db
+const addDepartment = () => {
+    inquirer.prompt({
+        type: 'input',
+        name: 'name',
+        message: 'What is the name of the department?'
+    }).then(({ name }) => {
+        const sql = `INSERT INTO department (name) VALUES (?)`
+        db.query(sql, (err, res) => {
+        if (err) throw err;
+        console.table(`${name} deparment added`);
+        mainMenu;
+    });
+    });
+};
+
+// add role to the db 
+const addRole = () => {
+    inquirer.prompt([
+        {
+            type: 'input',
+            name: 'title',
+            message: 'What is the tile of the role?'
+        },
+        {
+            type: 'input',
+            name: 'salary',
+            message: 'What is the salary of the role?'
+        },
+        {
+            type: 'input',
+            name: 'department_id',
+            message: 'What is the department ID of the role?'
+        },
+    ]).then(({ title, salary, department_id }) => {
+        const sql = `INSERT INTO role (title, salary, department_id) VALUES (?, ?, ?)`;
+        db.query(sql, [title, salary, department_id], (err,res) => {
+            if (err) throw err;
+            console.log(`Role ${title} Added`);
+            mainMenu();
+        });
+    });
+};
+
+//add employee to db
+const addEmployee = () => {
+    inquirer.prompt([
+        {
+            type: 'input',
+            name: 'first_name',
+            message: 'What is the employee first name?'
+        },
+        {
+            type: 'input',
+            name: 'last_name',
+            message: 'What is the employee last name?'
+        },
+        {
+            type: 'input',
+            name: 'role_id',
+            message: 'What is the employee role ID?'
+        },
+        {
+            type: 'input',
+            name: 'manager_id',
+            message: 'What is the employee manager ID?'
+        }
+    ]).then(({ first_name, last_name, role_id, manager_id }) => {
+        const sql = `INSERT INTO employee (first_name, last_name, role_id, manager_id) VALUES (?, ?, ? ?)`;
+        db.query(sql, [first_name, last_name, role_id, manager_id], (err,res) => {
+            if (err) throw err;
+            console.log(`employee ${first_name} ${last_name} added!`);
+            mainMenu();
+        });
+    });
+};
