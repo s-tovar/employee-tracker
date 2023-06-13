@@ -172,3 +172,28 @@ const addEmployee = () => {
         });
     });
 };
+
+// update role of employee into db
+const updateEmployeeRole = () => {
+    inquirer.prompt([
+        {
+            type: 'input',
+            name: 'employee_id',
+            message: 'Enter the employee ID that you want to update: '
+        },
+        {
+            type: 'input',
+            name: 'role_id',
+            message: 'Enter the new role ID: '
+        }
+    ]).then(({ employee_id, role_id }) => {
+        const sql = `UPDATE employee SET role_id = ? WHERE id = ?`;
+        db.query(sql, [role_id, employee_id], (err, res) => {
+          if (err) throw err;
+          console.log(`Employee's Role Updated`);
+          mainMenu();
+        });
+      });
+    };
+
+    mainMenu();
