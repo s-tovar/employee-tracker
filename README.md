@@ -17,9 +17,9 @@ This command-line application was created to allow non-developers to easily view
 
 ## Live Screen Recording of Application Functionality
 
-Link to [Video]():
+Link to [Video](https://drive.google.com/file/d/1BiRjWl22Fe6depcN8BeGd7V_UxbO5M01/view):
 ```
-link
+https://drive.google.com/file/d/1BiRjWl22Fe6depcN8BeGd7V_UxbO5M01/view
 ```
 
 ## Installation
