@@ -1,42 +1,52 @@
 # employee-tracker
 
   [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)]
-  ## Description 
 
-        A command-line application to manage a company's employee database using node.js, inquirer, and MYSQL to develop the back end of the application. To begin the application, use: 
+## Technologies Used 
 
-        ## Table of Contents 
+![Technologies](https://img.shields.io/badge/-Git-F05032?logo=Git&logoColor=white)
+![Technologies](https://img.shields.io/badge/-JavaScript-007396?logo=JavaScript&logoColor=white)
+![Technologies](https://img.shields.io/badge/-Node.js-339933?logo=Node.js&logoColor=white)
+![Technologies](https://img.shields.io/badge/-npm-CB3837?logo=npm&logoColor=white)
+![Technologies](https://img.shields.io/badge/-MySQL-4479A1?logo=MySQL&logoColor=white)
+![Technologies](https://img.shields.io/badge/-Inquirer-000000?logo=&logoColor=white)
 
-        - [Installation](#installation)
-        - [Usage](#usage)
-        - [License](#license)
-        - [Contribution](#contribution)
-        - [Tests](#tests)
-        - [Questions](#questions)
+## Description
 
-        ## Installation 
+This command-line application was created to allow non-developers to easily view and interact with information stored in databases. The command-line application was developed to manage a company's employee database using Node.js, Inquirer, and MYSQL to develop the back end of the application. 
 
-        Requirements include: Node.js 
+## Live Screen Recording of Application Functionality
 
-        ## Usage 
+Link to [Video]():
+```
+link
+```
 
-        To use this application open the integrated terminal and run node server.js
-        ## License 
-  
-  Distributed under the MIT license. See [MIT license page](https://choosealicense.com/licenses/mit/).
+## Installation
+***Requirements***
 
-        ## License
+[Node.js](https://nodejs.org/en/) | [Inquirer](https://www.npmjs.com/package/inquirer) | [MySQL](https://www.npmjs.com/package/mysql2)
 
-        MIT
+***Once Installed:***
+1. Clone the Repository on to your machine.
+2. Open the terminal and ensure you are in the right file path.
+3. Run the command ```npm install``` to download the packages.
+4. Then run the command ```node server.js``` to run the software.
+5. The command prompt will begin on your terminal.
 
-        ## Contribution 
+## Link to Repository
 
-        here lies some contributions
+The link to the [code](https://github.com/s-tovar/employee-tracker):
+```
+https://github.com/s-tovar/employee-tracker
+```
 
-        ## Tests 
+## Screenshot
 
-        n/a
+![plot](./lib/assets/Screenshot%202023-05-30%20at%2010.46.45%20PM.png)
 
-        ## Questions 
+To run testing, open the Terminal and use the command (npm run test).
 
-        Please reach out to employee-tracker on [Github](https://github.com/s-tovar).
+## Credits 
+
+Documentation and tutorials on SQL: https://www.w3schools.com/sql/default.asp

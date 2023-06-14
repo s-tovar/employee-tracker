@@ -6,13 +6,13 @@ VALUES ("Instructor"),
 
 INSERT INTO role (title, salary, department_id)
 VALUES ("AVID Teacher", 70000, 1),
-       ("Math Teacher", 80000, 2),
-       ("Librarian", 90000, 3),
-       ("Computer Librarian", 91000, 4),
-       ("Principal", 100000, 5),
-       ("Vice Principal", 99000, 6),
-       ("AVID Tutor 1", 35000, 7),
-       ("AVID Tutor 2", 35000, 8);
+       ("Math Teacher", 80000, 1),
+       ("Librarian", 90000, 2),
+       ("Computer Librarian", 91000, 2),
+       ("Principal", 100000, 3),
+       ("Vice Principal", 99000, 3),
+       ("AVID Tutor 1", 35000, 4),
+       ("AVID Tutor 2", 35000, 4);
 
 INSERT INTO employee (first_name, last_name, role_id, manager_id)
 VALUES ("Marissa", "Gaustin", 1, 5),

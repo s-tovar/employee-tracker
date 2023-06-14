@@ -15,12 +15,6 @@ const db = mysql.createConnection(
   console.log(`Connected to the employee_tracker database.`)
 );
 
-// db.connect(err => {  --> is this needed? is it already connected?
-//     if (err) throw err;
-//     console.log('Database connected.');
-//     employee_tracker();
-// });
-
 // main menu function that prompts user
 const mainMenu = () => {
     inquirer.prompt({
@@ -83,7 +77,7 @@ const viewAllRoles = () => {
     db.query(sql, (err, res) => {
         if (err) throw err;
         console.table(res);
-        mainMenu;
+        mainMenu();
     });
 };
 
@@ -93,7 +87,7 @@ const viewAllEmployees = () => {
     db.query(sql, (err, res) => {
         if (err) throw err;
         console.table(res);
-        mainMenu;
+        mainMenu();
     });
 };
 
@@ -108,7 +102,7 @@ const addDepartment = () => {
         db.query(sql, (err, res) => {
         if (err) throw err;
         console.table(`${name} deparment added`);
-        mainMenu;
+        mainMenu();
     });
     });
 };
@@ -165,7 +159,7 @@ const addEmployee = () => {
             message: 'What is the employee manager ID?'
         }
     ]).then(({ first_name, last_name, role_id, manager_id }) => {
-        const sql = `INSERT INTO employee (first_name, last_name, role_id, manager_id) VALUES (?, ?, ? ?)`;
+        const sql = `INSERT INTO employee (first_name, last_name, role_id, manager_id) VALUES (?, ?, ?, ?)`;
         db.query(sql, [first_name, last_name, role_id, manager_id], (err,res) => {
             if (err) throw err;
             console.log(`employee ${first_name} ${last_name} added!`);
