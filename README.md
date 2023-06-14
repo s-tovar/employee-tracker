@@ -43,9 +43,7 @@ https://github.com/s-tovar/employee-tracker
 
 ## Screenshot
 
-![plot](./lib/assets/Screenshot%202023-05-30%20at%2010.46.45%20PM.png)
-
-To run testing, open the Terminal and use the command (npm run test).
+![plot](./assets/Screenshot%202023-06-13%20at%2010.39.34%20PM.png)
 
 ## Credits 
 
