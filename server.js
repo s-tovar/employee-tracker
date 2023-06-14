@@ -99,7 +99,7 @@ const addDepartment = () => {
         message: 'What is the name of the department?'
     }).then(({ name }) => {
         const sql = `INSERT INTO department (name) VALUES (?)`;
-        db.query(sql, name, (err, res) => {
+        db.query(sql, [name], (err, res) => {
             if (err) throw err;
             console.log(`${name} Department Added`);
             mainMenu();
