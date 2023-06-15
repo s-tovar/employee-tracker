@@ -42,7 +42,7 @@ const mainMenu = () => {
             case 'View all employees':
                 viewAllEmployees();;
                 break;
-            case 'Add a deparment':
+            case 'Add a department':
                 addDepartment();
                 break;
             case 'Add role':
@@ -55,6 +55,7 @@ const mainMenu = () => {
                 updateEmployeeRole();
                 break;
             default:
+                console.log('Goodbye');
                 db.end();
         }
     });
